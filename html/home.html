@@ -38,23 +38,20 @@
         <!-- menu -->
         <div class="grid grid-cols-4 mb-10 gap-9 bg-white rounded-[40px] py-3 px-10">
             <button>
-                <a  class="btn text-white bg-pink py-2 px-4 rounded-3xl" href="home.html">HOME</a>
+                <a  class="btn text-white bg-pink py-2 px-4 rounded-3xl hover:bg-green" href="home.html">HOME</a>
             </button>
             <button>
-                <a class="btn text-brown py-2 px-4 rounded-3xl" href="html.html">HTML</a>
+                <a class="btn text-brown py-2 px-4 rounded-3xl hover:bg-green" href="html.html">HTML</a>
             </button>
             <button>
-                <a class="btn text-brown py-2 px-4 rounded-3xl" href="#">CSS</a>
+                <a class="btn text-brown py-2 px-4 rounded-3xl hover:bg-green" href="css.html">CSS</a>
             </button>
             <button>
-                <a class="btn text-brown py-2 px-4 rounded-3xl" href="#">JavaScript</a>
+                <a class="btn text-brown py-2 px-4 rounded-3xl hover:bg-green" href="js.hmtl">JavaScript</a>
             </button>
         </div>
         <!-- contact us -->
         <div class="w-[20%] flex justify-end items-center mb-10 ">
-            <button>
-                <a class="font-bold text-rose py-2 px-4 rounded-3xl" href="#">contact us</a>
-            </button>
         </div>
     </div>
 
@@ -72,9 +69,9 @@
                     But you don't know how.Don't worry, We got you!<br> 
                     This website can solve this problem.
                 </p>
-                <button class="shade text-brown px-10 rounded-[40px] left-[35px] -bottom-[160px] py-[15px] absolute btn bg-lime text-[20px]">click here to start our lesson
+                <a href="html.html"><button class="shade text-brown px-10 rounded-[40px] left-[35px] -bottom-[160px] py-[15px] absolute btn bg-lime text-[20px] hover:bg-green">click here to start our lesson
                     <i class="fa-solid fa-angle-right ml-3 scale-150"></i>
-                </button>
+                </button></a>
                 <img src="/img/ftext.png" class="absolute w-[46px] left-[352px] top-[20px]">
                 <img src="/img/ftext.png" class="absolute w-[42px] left-[18px] top-[90px] rotate-[60deg]">
             </div>
@@ -115,8 +112,10 @@
                         <div class="shade absolute bold -top-[60px] -left-[35px] bg-blue w-[118px] h-[118px] flex justify-center items-center text-[32px] rounded-full">HTML</div>
                     </div>
                     <div class="flex justify-center mt-7">
-                        <button class="shade btn bg-rose text-[16px] py-3 px-5 rounded-[20px] transition-all hover:scale-105 hover:bg-green">Learn HTML<i class="ml-4 fa-solid fa-angle-right scale-150"></i></button>
-                    </div>
+                        <a href="html.html">
+                            <button class="shade btn bg-rose text-[16px] py-3 px-5 rounded-[20px] transition-all hover:scale-105 hover:bg-green">Learn HTML<i class="ml-4 fa-solid fa-angle-right scale-150"></i></button>
+                    
+                        </a></div>
                 </div>
                 <div>
                     <div class="shade relative flex justify-center text-center text-[20px] bg-white rounded-3xl px-[40px] w-[316px] items-center h-[356px]">
@@ -125,8 +124,10 @@
                         <div class="shade absolute bold -top-[60px] -left-[35px] bg-green w-[118px] h-[118px] flex justify-center items-center text-[32px] rounded-full">CSS</div>
                     </div>
                     <div class="flex justify-center mt-7">
-                        <button class="shade btn bg-lime text-[16px] py-3 px-5 rounded-[20px] transition-all hover:scale-105 hover:bg-green">Learn CSS<i class="ml-4 fa-solid fa-angle-right scale-150"></i></button>
-                    </div>
+                        <a href="css.html">
+                            <button class="shade btn bg-lime text-[16px] py-3 px-5 rounded-[20px] transition-all hover:scale-105 hover:bg-green">Learn CSS<i class="ml-4 fa-solid fa-angle-right scale-150"></i></button>
+                    
+                        </a></div>
                 </div>
                 <div>
                     <div class="shade relative flex justify-center text-center text-[20px] bg-white rounded-3xl px-[40px] w-[316px] items-center h-[356px]">
@@ -140,7 +141,10 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-7">
-                        <button class="shade btn bg-rose text-[16px] py-3 px-5 rounded-[20px] transition-all hover:scale-105 hover:bg-green">Learn JavaScript<i class="ml-4 fa-solid fa-angle-right scale-150"></i></button>
+                        <a href="js.html">
+                            <button class="shade btn bg-rose text-[16px] py-3 px-5 rounded-[20px] transition-all hover:scale-105 hover:bg-green">Learn JavaScript<i class="ml-4 fa-solid fa-angle-right scale-150"></i></button>
+                    
+                        </a>
                     </div>
                 </div>
             </div>
@@ -217,9 +221,14 @@
     </div>
 
     <!-- footer -->
-    <div class="mt-[450px] w-full h-[300px] bg-green relative flex justify-center">
+    <div class="mt-[450px] w-full h-[300px] bg-green relative flex justify-center items-center">
         <p class="absolute text-[40px] bold text-green left-[50px] -top-[38px]">Reference</p>
         <img class="-top-[270px] absolute w-[700px]" src="/img/footer.png">
+        <div class="text-center">
+            <p class="norm text-[20px] text-white mb-10">HTML : https://html.com/#Creating_Your_First_HTML_Webpage</p>
+            <p class="norm text-[20px] text-white mb-10">CSS : https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#what_is_css</p>
+            <p class="norm text-[20px] text-white mb-10">JavaScript : https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basicss</p>
+        </div>
     </div>
 </body>
 </html>

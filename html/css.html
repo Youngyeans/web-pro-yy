@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/src/output.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Grandstander:wght@900&family=Inter&family=Moul&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="relative overflow-x-hidden">
+    <!-- bg1 -->
+    <div class="absolute -left-[19px] -top-[30px]">
+        <img class="w-[100vw]" src="/img/htmlb1.png">
+    </div>
+
+    <!-- navbar -->
+    <div class="fixed w-full flex p-6 justify-center z-50 ">
+        <!-- logo -->
+        <div class="w-[20%]">
+            <img class="w-[165px]" src="/img/logo.png">
+        </div>
+        <!-- menu -->
+        <div class="grid grid-cols-4 mb-10 gap-9 bg-yellow rounded-[40px] py-3 px-10">
+            <button>
+                <a  class="btn text-brown py-2 px-4 rounded-3xl hover:bg-green" href="home.html">HOME</a>
+            </button>
+            <button>
+                <a class="btn text-brown py-2 px-4 rounded-3xl hover:bg-green" href="html.html">HTML</a>
+            </button>
+            <button>
+                <a class="btn shade text-white bg-pink py-2 px-4 rounded-3xl hover:bg-green" href="css.html">CSS</a>
+            </button>
+            <button>
+                <a class="btn text-brown py-2 px-4 rounded-3xl hover:bg-green" href="js.html">JavaScript</a>
+            </button>
+        </div>
+        <!-- contact us -->
+        <div class="w-[20%] flex justify-end items-center mb-10 ">
+        </div>
+    </div>
+
+    <!-- header -->
+    <div class="relative flex justify-center mt-0">
+        <div class="relative flex space-x-[8vw] mt-10">
+            <!-- decoration -->
+            <div class="absolute bg-white w-[339px] h-[339px] rounded-full left-5 top-5"></div>
+            <img class="absolute left-[400px] top-20 w-[95px] -rotate-[23.43deg]" src="/img/fpink.png">
+            <img class="absolute -left-[130px] top-[300px] w-[150px] rotate-[64.66deg]" src="/img/flime.png">
+            <img class="absolute -left-[500px] -bottom-[250px] w-[300px] rotate-[52.23deg]" src="/img/ftext.png">
+            
+            <!-- image -->
+            <img class="relative w-[515px] bg-" src="/img/desktop.png">
+            <!-- text -->
+            <div class="relative mt-[210px]">
+                <!-- decoration -->
+                <div class="absolute left-[170px] -top-[70px] w-[83px] h-[83px] bg-green rounded-full"></div>
+                <div class="absolute left-[250px] -top-[30px] w-[212px] h-[212px] bg-lime rounded-full"></div>
+                <img class="absolute left-[150px] top-[4px] w-[30px] rotate-[15deg]" src="/img/ftext.png">
+                <img class="absolute -right-[280px] -bottom-[80px] w-[240px] -rotate-[63.84deg]" src="/img/dgreen.png">
+                <img class="absolute -right-[130px] -top-[200px] w-[150px]" src="/img/fblue.png">
+                <!-- txt -->
+                <p class="relative tracking-wider norm text-[55px]">What is: <u>CSS</u></p>
+                <p class="relative tracking-wide w-[340px] text-center small text-[16px]">after we learn about html. Now, it's time to style and decorate it!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- catagories -->
+    <div class="relative flex justify-center mt-[200px] select-none">
+        <div class="flex space-x-[9vw]">
+            <!-- 1 -->
+            <div class="relative" id="dropdownButton">
+                <button id="button" onclick="toggleDropdown()" class="hover:bg-pink btn bg-rose w-[380px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">What is CSS <i class="ml-[120px] fa-solid fa-angle-down"></i></button>
+                <div id="dropdown" onclick="Dropdown()" class="absolute w-[100%] h-[160px] hidden bg-yellow rounded-[30px]">
+                    <ul class="">
+                        <li id="1" onclick="move(this.id)"><a href="#section1"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white ">What is CSS</button></li>
+                        <li id="2" onclick="move(this.id)"><a href="#section2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Anatomy of a CSS ruleset</button></li>
+                        <li id="3" onclick="move(this.id)"><a href="#section3"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Selecting multiple elements</button></li>
+                        <li id="4" onclick="move(this.id)"><a href="#section4"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Different types of selectors</button></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="relative" id="dropdownButton2">
+                <button id="button2" onclick="toggleDropdown2()" class="btn hover:bg-pink bg-rose w-[380px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">Font and Text</button>
+            </div>
+            <!-- 3 -->
+            <div class="relative" id="dropdownButton3">
+                <button id="button3" onclick="toggleDropdown3()" class="btn hover:bg-pink bg-rose w-[380px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">all about boxes<i class="ml-3 fa-solid fa-angle-down"></i></button>
+                <div id="dropdown3" onclick="Dropdown3()" class="absolute w-[100%] h-[200px] hidden bg-yellow rounded-[30px]">
+                    <ul class="">
+                        <li id="1.2" onclick="move(this.id)"><a href="#section1.2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white ">all about boxes</button></li>
+                        <li id="2.2" onclick="move(this.id)"><a href="#section2.2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Changing the page color</button></li>
+                        <li id="3.2" onclick="move(this.id)"><a href="#section3.2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Styling the body</button></li>
+                        <li id="4.2" onclick="move(this.id)"><a href="#section4.2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Positioning and styling the main page title</button></li>
+                        <li id="5.2" onclick="move(this.id)"><a href="#section5.2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Centering the image</button></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- information -->
+    <div id="page1" class="w-full mt-[300px] mb-[300px] hidden">
+        <!-- 1 -->
+        <div id="section1" class="mb-[400px]">
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="bold text-[40px] mb-10">What is CSS?</p>
+                    <p class="small text-[20px]">Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-10">
+                        <div class="h-[58px]"></div>
+                        <p class="small text-[20px] mb-5">you can do it by: Open your index.html file.<br>Paste the following line in the head (between the <head> and </head> tags):</p>
+                        <div class="flex justify-center">
+                            <img src="/img/carbon (11).png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section2" class="mb-[400px] hidden">
+            <div class="flex justify-center ">
+                <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-20">
+                        <div class=" text-center">
+                            <div class=" h-[58px]"></div>
+                            <p class="bold text-[40px] mb-10">The History of HTML</p>
+                            <div class="flex justify-center">
+                                <img src="/img/css-declaration-small.png">
+                            </div>
+                            <p class="small text-[20px] mt-10">
+                                The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.)<br> Note the names of the individual parts: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[50%]">
+                    <p class="norm text-[24px] mb-10">Selector</p>
+                    <p class="small text-[20px]">This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;p&gt;</span> elements). To style a different element, change the selector.</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[50%]">
+                    <p class="norm text-[24px] mb-10">Declaration</p>
+                    <p class="small text-[20px]">This is a single rule like color: red;. It specifies which of the element's properties you want to style.</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[50%]">
+                    <p class="norm text-[24px] mb-10">Properties</p>
+                    <p class="small text-[20px]">These are ways in which you can style an HTML element. (In this example, color is a property of the , <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;p&gt;</span> elements.) In CSS, you choose which properties you want to affect in the rule.</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[50%]">
+                    <p class="norm text-[24px] mb-10">Property value</p>
+                    <p class="small text-[20px]">To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)</p>
+                </div>
+            </div>
+            <div class="flex justify-center ">
+                <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="p-20">
+                        <div class="">
+                            <div class=" h-[58px]"></div>
+                            <p class="text-center norm text-[24px] mb-10">Note the other important parts of the syntax:</p>
+                            <div class="flex justify-center">
+                                <ul class="w-[50%]">
+                                    <li class="list-disc small text-[20px] mb-10">Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+                                    <li class="list-disc small text-[20px] mb-10">Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+                                    <li class="list-disc small text-[20px] mb-10">Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div id="section3" class=" flex justify-center mb-[300px]">
+            <div class=" w-[50%] flex justify-center text-center">
+                <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="p-10">
+                        <div class="w-[100%] h-[58px]"></div>
+                        <p class="bold text-[40px] mb-7">Selecting multiple elements</p>
+                        <p class="small text-[20px]">You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:
+                        </p>
+                        <div class="flex justify-center mt-10">
+                            <img src="/img/carbon (12).png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section4" class=" flex justify-center mb-[300px]">
+            <div class="flex justify-center text-center w-[80%]">
+                <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="p-10">
+                        <div class="w-[100%] h-[58px]"></div>
+                        <p class="bold text-[40px] mb-6">Different types of selectors</p>
+                        <p class="small text-[20px]">
+                            There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:
+                        </p>
+                        <div class="flex justify-center">
+                            <table class="border-separate border-spacing-4 border-slate-400">
+                                <thead>
+                                    <tr class="norm text-[24px]">
+                                        <th class="px-10 py-5">Selector name</th>
+                                        <th class="px-10">What does it select</th>
+                                        <th class="px-10">Example</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="small text-[20px]">
+                                        <td>Element selector (sometimes called a tag or type selector)</td>
+                                        <td>All HTML elements of the specified type.</td>
+                                        <td>p<br>
+                                            selects <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;p&gt;</span>/td>
+                                    </tr>
+                                    <tr class="small text-[20px]">
+                                        <td>ID selector</td>
+                                        <td>The element on the page with the specified ID. On a given HTML page, each id value should be unique.</td>
+                                        <td>#my-id<br>
+                                            selects
+                                            <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;p id="my-id"&gt;</span> or<br>
+                                                <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;a id="my-id&gt;</span>
+                                            </td>
+                                    </tr>
+                                    <tr class="small text-[20px]">
+                                        <td>Class selector</td>
+                                        <td>The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page.</td>
+                                        <td>.my-class<br>
+                                            selects
+                                            <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;p class="my-class&gt;</span> or<br>
+                                                <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;a class="my-class&gt;</span></td>
+                                    </tr>
+                                    <tr class="small text-[20px]">
+                                        <td>Attribute selector</td>
+                                        <td>The element(s) on the page with the specified attribute.</td>
+                                        <td>.img[src]<br>
+                                            selects
+                                            <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;img src="myimage.png"&gt;</span> or <br> but not
+                                                <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;img&gt;</span></td>
+                                    </tr>
+                                    <tr class="small text-[20px]">
+                                        <td>Pseudo-class selector</td>
+                                        <td>The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.)</td>
+                                        <td>a:hover<br>
+                                            selects <span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;a&gt;</span>, but only when the mouse pointer is hovering over the link.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="page2" class="w-full mt-[200px] mb-[300px] hidden">
+        <div class="flex justify-center">
+            <div class="w-[60%] relative shade bg-white rounded-[30px] flex justify-center items-center mb-[400px]">
+                <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                    <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                </div>
+                <!-- text -->
+                <div class="text-center p-20">
+                    <div class="w-[100%] h-[58px]"></div>
+                    <p class="bold text-[40px] mb-10">Fonts and text</p>
+                            <div class="flex justify-center mt-5">
+                    <p class="small text-[20px]">Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the style.css file.</p>
+                    <div class="flex justify-center">
+                        <div class="w-[80%]">
+                            <p class="small text-[20px] mt-20">1. First, find the output from Google Fonts that you previously saved from What will your website look like?. Add the <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;link&gt;</span>  element somewhere inside your index.html's head (anywhere between the <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;head&gt;</span>  and <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;/head&gt;</span>  tags). It looks something like this:</p>
+                            <div class="flex justify-center mt-5">
+                                <img src="/img/carbon (13).png">
+                            </div>
+                            <p class="small text-[20px] mt-5">This code links your page to a style sheet that loads the Open Sans font family with your webpage.</p>
+                            <p class="small text-[20px] mt-20">2.Next, delete the existing rule you have in your style.css file. It was a good test, but let's not continue with lots of red text.</p>
+                            <p class="small text-[20px] mt-20">3.Add the following lines (shown below), replacing the font-family assignment with your font-family selection from What will your website look like?. The property font-family refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;html&gt;</span> is the parent element of the whole page, all elements inside it inherit the same font-size and font-family</p>
+                            <div class="flex justify-center mt-5">
+                                <img src="/img/carbon (14).png">
+                            </div>
+                            <p class="small text-[20px] mt-20">4.Now let's set font sizes for elements that will have text inside the HTML body (<span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;h1&gt;</span>, <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;li&gt;</span>, and <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;p&gt;</span>). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.</p>
+                            <div class="flex justify-center mt-5">
+                                <img src="/img/carbon (15).png">
+                            </div>
+                            <p class="small text-[20px] mt-5">Adjust the px values as you like.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page3" class="w-full mt-[200px] mb-[300px] hidden ">
+        <div id="section1.2" class="mb-[400px]">
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="bold text-[40px] mb-10">all about boxes</p>
+                    <p class="small text-[20px]">CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:</p>
+                    <ul class="small text-[20px] space-y-3 mt-12">
+                        <li><span class="py-1 px-2 bg-pink font-bold rounded-[20px]">padding</span> : the space around the content. In the example below, it is the space around the paragraph text.</li>
+                        <li><span class="py-1 px-2 bg-rose font-bold rounded-[20px]">border</span> :the solid line that is just outside the padding.</li>
+                        <li><span class="py-1 px-2 bg-green font-bold rounded-[20px]">margin</span> : the space around the outside of the border.</li>
+                        <li><span class="py-1 px-2 bg-blue font-bold rounded-[20px]">width</span>  (of an element).</li>
+                        <li><span class="py-1 px-2 bg-lime font-bold rounded-[20px]">background-color</span> : the color behind an element's content and padding.</li>
+                        <li><span class="py-1 px-2 bg-pink font-bold rounded-[20px]">color</span> : the color of an element's content (usually text).</li>
+                        <li><span class="py-1 px-2 bg-blue font-bold rounded-[20px]">text-shadow</span> : sets a drop shadow on the text inside an element.</li>
+                        <li><span class="py-1 px-2 bg-green font-bold rounded-[20px]">display</span> : sets the display mode of an element. (keep reading to learn more)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="w-[40%] relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-10">
+                        <div class="w-[100%] h-[58px]"></div>
+                        <img src="/img/box-model.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section2.2" class=" mb-[400px]">
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="bold text-[40px] mb-10">Changing the page color</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class=" relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-10">
+                        <div class="h-[58px]"></div>
+                        <img src="/img/carbon (16).png">
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-20 text-center small text-[20px]">This is where we insert the page name as it will appear at the top of the browser window or tab.I
+            </p>
+        </div>
+
+        <div id="section3.2" class="mb-[400px]">
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="bold text-[40px] mb-10">Styling the body</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="w-[40%] relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-10">
+                        <div class="w-[100%] h-[58px]"></div>
+                        <img src="/img/carbon (17).png">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="small text-[20px]">There are several declarations for the <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;body&gt;</span> element. Let's go through these line-by-line:</p>
+                    <ul class="small text-[20px] space-y-3 mt-12">
+                        <li><span class="py-1 px-2 bg-pink font-bold rounded-[20px]">width: 600px;</span> : This forces the body to always be 600 pixels wide.</li>
+                        <li><span class="py-1 px-2 bg-rose font-bold rounded-[20px]">margin: 0 auto;</span> : When you set two values on a property like margin or padding, the first value affects the element's top and bottom side (setting it to 0 in this case); the second value affects the left and right side. (Here, auto is a special value that divides the available horizontal space evenly between left and right). You can also use one, two, three, or four values, as documented in Margin Syntax.
+                        </li>
+                        <li><span class="py-1 px-2 bg-green font-bold rounded-[20px]">background-color: #FF9500;</span> :  This sets the element's background color. This project uses a reddish orange for the body background color, as opposed to dark blue for the <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;html&gt;</span> element. (Feel free to experiment.)</li>
+                        <li><span class="py-1 px-2 bg-blue font-bold rounded-[20px]">width</span>  (of an element).</li>
+                        <li><span class="py-1 px-2 bg-lime font-bold rounded-[20px]">background-color: #FF9500;</span> : the color behind an element's content and padding.</li>
+                        <li><span class="py-1 px-2 bg-pink font-bold rounded-[20px]">padding: 0 20px 20px 20px;</span> : tThis sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with margin, you can use one, two, three, or four values, as documented in Padding Syntax.
+                        </li>
+                        <li><span class="py-1 px-2 bg-blue font-bold rounded-[20px]">border: 5px solid black;</span> : This sets values for the width, style and color of the border. In this case, it's a five-pixel-wide, solid black border, on all sides of the body.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="section4.2" class="mb-[400px]">
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="bold text-[40px] mb-10">Positioning and styling the main page title</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class=" relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-10">
+                        <div class="h-[58px]"></div>
+                        <img src="/img/carbon (18).png">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="norm text-[24px]">text-shadow</p>
+                    <ul class="small text-[20px] space-y-3 mt-12">
+                        <li class="list-disc">The first pixel value sets the horizontal offset of the shadow from the text: how far it moves across.</li>
+                        <li class="list-disc">The second pixel value sets the vertical offset of the shadow from the text: how far it moves down.</li>
+                        <li class="list-disc">The third pixel value sets the blur radius of the shadow. A larger value produces a more fuzzy-looking shadow.</li>
+                        <li class="list-disc">The fourth value sets the base color of the shadow.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="section5.2" class="mb-[400px]">
+            <div class="flex justify-center">
+                <div class="text-center p-20 w-[80%]">
+                    <p class="bold text-[40px] mb-10">Centering the image</p>
+                    <p class="small text-[20px]">The <span class="py-1 px-2 bg-green font-bold rounded-[20px]">&lt;body&gt;</span> is a block element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are inline elements, for the auto margin trick to work on this image, we must give it block-level behavior using display: block;.</p>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class=" relative shade bg-white rounded-[30px] flex justify-center items-center">
+                    <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                        <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                        <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                    </div>
+                    <!-- text -->
+                    <div class="text-center p-10">
+                        <div class="h-[58px]"></div>
+                        <img src="/img/carbon (19).png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="mt-[450px] w-full h-[300px] bg-green relative flex justify-center items-center">
+        <p class="absolute text-[40px] bold text-green left-[50px] -top-[38px]">Reference</p>
+        <img class="-top-[270px] absolute w-[700px]" src="/img/footer.png">
+        <div class="text-center">
+            <p class="norm text-[20px] text-white mb-10">HTML : https://html.com/#Creating_Your_First_HTML_Webpage</p>
+            <p class="norm text-[20px] text-white mb-10">CSS : https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#what_is_css</p>
+            <p class="norm text-[20px] text-white mb-10">JavaScript : https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basicss</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(){
+            let dropdown1 = document.querySelector('#dropdownButton #dropdown');
+            let open1 = document.getElementById('page1');
+            let open2 = document.getElementById('page2');
+            let open3 = document.getElementById('page3');
+            let btn1 = document.getElementById('button');
+            let btn2 = document.getElementById('button2');
+            let btn3 = document.getElementById('button3');
+
+            let dropdown = document.querySelector('#dropdown3');
+            dropdown.classList.add("hidden");
+
+            open1.classList.remove("hidden");
+            open2.classList.add("hidden");
+            open3.classList.add("hidden");
+
+            btn1.classList.remove("bg-rose");
+            btn1.classList.add("bg-pink");
+            btn2.classList.remove("bg-pink");
+            btn2.classList.add("bg-rose");
+            btn3.classList.remove("bg-pink");
+            btn3.classList.add("bg-rose");
+
+            dropdown1.classList.toggle("hidden");
+        }
+
+        function toggleDropdown2(){
+            let open1 = document.getElementById('page1');
+            let open2 = document.getElementById('page2');
+            let open3 = document.getElementById('page3');
+            let btn1 = document.getElementById('button');
+            let btn2 = document.getElementById('button2');
+            let btn3 = document.getElementById('button3');
+
+            let dropdown = document.querySelector('#dropdown');
+            dropdown.classList.add("hidden");
+            let dropdown3 = document.querySelector('#dropdown3');
+            dropdown3.classList.add("hidden");
+
+            open1.classList.add("hidden");
+            open2.classList.remove("hidden");
+            open3.classList.add("hidden");
+
+            btn1.classList.remove("bg-pink");
+            btn1.classList.add("bg-rose");
+            btn2.classList.remove("bg-rose");
+            btn2.classList.add("bg-pink");
+            btn3.classList.remove("bg-pink");
+            btn3.classList.add("bg-rose");
+        }
+
+        function toggleDropdown3(){
+            let dropdown3 = document.querySelector('#dropdownButton3 #dropdown3');
+            let open1 = document.getElementById('page1');
+            let open2 = document.getElementById('page2');
+            let open3 = document.getElementById('page3');
+            let btn1 = document.getElementById('button');
+            let btn2 = document.getElementById('button2');
+            let btn3 = document.getElementById('button3');
+
+            /*let dropdown = document.querySelector('#dropdown');
+            dropdown.classList.add("hidden");*/
+
+            open3.classList.remove("hidden");
+/*
+            btn3.classList.remove("bg-rose");
+            btn3.classList.add("bg-pink");
+            btn2.classList.remove("bg-pink");
+            btn2.classList.add("bg-rose");
+            btn1.classList.remove("bg-pink");
+            btn1.classList.add("bg-rose");
+            */
+
+            dropdown3.classList.toggle("hidden");
+        }
+
+        function Dropdown(){
+            let dropdown = document.querySelector('#dropdown');
+            dropdown.classList.toggle("hidden");
+        }
+
+        function Dropdown3(){
+            let dropdown = document.querySelector('#dropdown3');
+            dropdown.classList.toggle("hidden");
+        }
+
+        function move(id){
+            const section = document.getElementById("section"+id);
+            const sectionY = section.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+            top: sectionY - window.innerHeight / 8,
+            behavior: 'smooth',
+            });
+        }
+        
+    </script>
+</body>
+</html>
