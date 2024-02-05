@@ -76,17 +76,41 @@
     </div>
 
     <!-- catagories -->
-    <div class="relative flex justify-center mt-[200px]">
+    <div class="relative flex justify-center mt-[200px] select-none">
         <div class="flex space-x-[9vw]">
-            <button class="btn bg-pink w-[358px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">What is HTML</button>
-            <button class="btn bg-rose w-[358px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">Basic Construction of HTML</button>
+            <div class="relative" id="dropdownButton">
+                <button id="button" onclick="toggleDropdown()" class="hover:bg-pink btn bg-rose w-[380px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">What is HTML <i class="ml-[120px] fa-solid fa-angle-down"></i></button>
+                <div id="dropdown" onclick="Dropdown()" class="absolute w-[100%] h-[240px] hidden bg-yellow rounded-[30px]">
+                    <ul class="">
+                        <li id="1" onclick="move(this.id)"><a href="#section1"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white ">What is HTML</button></li>
+                        <li id="2" onclick="move(this.id)"><a href="#section2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">The History of HTML</button></li>
+                        <li id="34" onclick="move(this.id)"><a href="#section34"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">What are Tags and Attributes?</button></li>
+                        <li id="34" onclick="move(this.id)"><a href="#section34"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">What Are HTML Tags?</button></li>
+                        <li id="5" onclick="move(this.id)"><a href="#section5"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">What are HTML Attributes?</button></li>
+                        <li id="6" onclick="move(this.id)"><a href="#section6"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Golden Rules To Remember</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="relative" id="dropdownButton2">
+                <button id="button2" onclick="toggleDropdown2()" class="btn hover:bg-pink bg-rose w-[380px] h-[98px] text-white text-[20px] flex justify-start items-center px-10 py-5 rounded-[30px]">Basic Construction of HTML <i class="ml-3 fa-solid fa-angle-down"></i></button>
+                <div id="dropdown2" onclick="Dropdown2()" class="absolute w-[100%] h-[240px] hidden bg-yellow rounded-[30px]">
+                    <ul class="">
+                        <li id="1" onclick="move(this.id)"><a href="#section1"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white ">What is HTML</button></li>
+                        <li id="2" onclick="move(this.id)"><a href="#section2"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">The History of HTML</button></li>
+                        <li id="34" onclick="move(this.id)"><a href="#section34"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">What are Tags and Attributes?</button></li>
+                        <li id="34" onclick="move(this.id)"><a href="#section34"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">What Are HTML Tags?</button></li>
+                        <li id="5" onclick="move(this.id)"><a href="#section5"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">What are HTML Attributes?</button></li>
+                        <li id="6" onclick="move(this.id)"><a href="#section6"></a><button class="btn text-[16px] text-brown w-full rounded-[40px] py-2 hover:bg-blue hover:border-white">Golden Rules To Remember</button></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- information -->
-    <div id="page1" class="w-full mt-[300px] mb-[300px]">
+    <div id="page1" class="w-full mt-[300px] mb-[300px] hidden">
         <!-- 1 -->
-        <div class="flex justify-center">
+        <div id="section1" class="flex justify-center">
             <div class="w-[60%] relative shade bg-white rounded-[30px] flex justify-center items-center mb-[400px]">
                 <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
                     <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
@@ -105,7 +129,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center mb-[400px]">
+        <div id="section2" class="flex justify-center mb-[400px]">
             <div class="w-[60%] relative shade bg-white rounded-[30px] flex justify-center items-center">
                 <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
                     <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
@@ -128,7 +152,7 @@
         </div>
 
         <!-- 2 -->
-        <div class=" flex justify-center mb-[300px]">
+        <div id="section34" class=" flex justify-center mb-[300px]">
             <div class="w-[70%] grid grid-cols-2 gap-[10vw] text-center">
 
                 <div class="flex justify-center">
@@ -170,7 +194,7 @@
             </div>
         </div>
 
-        <div class=" flex justify-center mb-[300px]">
+        <div id="section5" class=" flex justify-center mb-[300px]">
             <div class="w-[70%] grid grid-cols-2 gap-[10vw] text-center">
 
                 <div class="flex justify-center">
@@ -212,7 +236,7 @@
             </div>
         </div>
 
-        <div class="flex justify-center mb-[400px]">
+        <div id="section6" class="flex justify-center mb-[300px]">
             <div class="w-[40%] relative shade bg-white rounded-[30px] flex justify-center items-center">
                 <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
                     <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
@@ -241,5 +265,73 @@
     <div id="page2" class="w-full mt-[200px] mb-[300px]">
 
     </div>
+
+    <!-- footer -->
+    <div class="mt-[450px] w-full h-[300px] bg-green relative flex justify-center">
+        <p class="absolute text-[40px] bold text-green left-[50px] -top-[38px]">Reference</p>
+        <img class="-top-[270px] absolute w-[700px]" src="/img/footer.png">
+    </div>
+
+    <script>
+        function toggleDropdown(){
+            let dropdown1 = document.querySelector('#dropdownButton #dropdown');
+            let open1 = document.getElementById('page1');
+            let open2 = document.getElementById('page2');
+            let btn1 = document.getElementById('button');
+            let btn2 = document.getElementById('button2');
+            let dropdown = document.querySelector('#dropdown2');
+            dropdown.classList.add("hidden");
+
+            open1.classList.remove("hidden");
+            open2.classList.add("hidden");
+
+            btn1.classList.remove("bg-rose");
+            btn1.classList.add("bg-pink");
+            btn2.classList.remove("bg-pink");
+            btn2.classList.add("bg-rose");
+
+            dropdown1.classList.toggle("hidden");
+        }
+
+        function toggleDropdown2(){
+            let dropdown2 = document.querySelector('#dropdownButton2 #dropdown2');
+            let open1 = document.getElementById('page1');
+            let open2 = document.getElementById('page2');
+            let btn1 = document.getElementById('button');
+            let btn2 = document.getElementById('button2');
+            let dropdown = document.querySelector('#dropdown');
+            dropdown.classList.add("hidden");
+
+            open1.classList.add("hidden");
+            open2.classList.remove("hidden");
+
+            btn1.classList.remove("bg-pink");
+            btn1.classList.add("bg-rose");
+            btn2.classList.remove("bg-rose");
+            btn2.classList.add("bg-pink");
+            dropdown2.classList.toggle("hidden");
+        }
+
+        function Dropdown(){
+            let dropdown = document.querySelector('#dropdown');
+            dropdown.classList.toggle("hidden");
+        }
+
+        function Dropdown2(){
+            let dropdown = document.querySelector('#dropdown2');
+            dropdown.classList.toggle("hidden");
+        }
+
+        function move(id){
+            const section = document.getElementById("section"+id);
+            const sectionY = section.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+            top: sectionY - window.innerHeight / 4,
+            behavior: 'smooth',
+            });
+        }
+        
+    </script>
 </body>
 </html>
