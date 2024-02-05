@@ -21,13 +21,13 @@
     </div>
 
     <!-- navbar -->
-    <div class="relative w-full flex p-6 justify-center">
+    <div class="fixed w-full flex p-6 justify-center z-50 ">
         <!-- logo -->
         <div class="w-[20%]">
             <img class="w-[165px]" src="/img/logo.png">
         </div>
         <!-- menu -->
-        <div class="grid grid-cols-4 mb-10 gap-9 ">
+        <div class="grid grid-cols-4 mb-10 gap-9 bg-yellow rounded-[40px] py-3 px-10">
             <button>
                 <a  class="btn text-brown py-2 px-4 rounded-3xl" href="home.html">HOME</a>
             </button>
@@ -51,7 +51,7 @@
 
     <!-- header -->
     <div class="relative flex justify-center mt-0">
-        <div class="relative flex space-x-[8vw]">
+        <div class="relative flex space-x-[8vw] mt-10">
             <!-- decoration -->
             <div class="absolute bg-white w-[339px] h-[339px] rounded-full left-5 top-5"></div>
             <img class="absolute left-[400px] top-20 w-[95px] -rotate-[23.43deg]" src="/img/fpink.png">
@@ -84,46 +84,162 @@
     </div>
 
     <!-- information -->
-    <div class="w-full mt-[200px] mb-[300px]">
+    <div id="page1" class="w-full mt-[300px] mb-[300px]">
         <!-- 1 -->
-        <div class=" flex justify-center">
-            <div class="w-[60%] border-2 text-center mb-10">
-                <p class="bold text-[40px] mb-10">What is HTML?</p>
-                <p class="small text-[20px]">Okay, so this is the only bit of mandatory theory. In order to begin to write HTML, it helps if you know what you are writing.
-                    HTML is the language in which most websites are written. HTML is used to create pages and make them functional.
-                    The code used to make them visually appealing is known as CSS and we shall focus on this in a later tutorial. For now, we will focus on teaching you how to build rather than design
-                </p>
+        <div class="flex justify-center">
+            <div class="w-[60%] relative shade bg-white rounded-[30px] flex justify-center items-center mb-[400px]">
+                <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                    <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                </div>
+                <!-- text -->
+                <div class="text-center p-20">
+                    <div class="w-[100%] h-[58px]"></div>
+                    <p class="bold text-[40px] mb-10">What is HTML?</p>
+                    <p class="small text-[20px]">Okay, so this is the only bit of mandatory theory. In order to begin to write HTML, it helps if you know what you are writing.
+                        HTML is the language in which most websites are written. HTML is used to create pages and make them functional.
+                        The code used to make them visually appealing is known as CSS and we shall focus on this in a later tutorial. For now, we will focus on teaching you how to build rather than design
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="flex justify-center">
-            <div class="w-[60%] border-2 text-center mb-10">
-                <p class="bold text-[40px] mb-10">The History of HTML</p>
-                <p class="small text-[20px]">
-                    HTML was first created by Tim Berners-Lee, Robert Cailliau, and others starting in 1989. It stands for Hyper Text Markup Language.
-                    Hypertext means that the document contains links that allow the reader to jump to other places in the document or to another document altogether. The latest version is known as HTML5.
-                    A Markup Language is a way that computers speak to each other to control how text is processed and presented. To do this HTML uses two things: tags and attributes.
-                </p>
+        <div class="flex justify-center mb-[400px]">
+            <div class="w-[60%] relative shade bg-white rounded-[30px] flex justify-center items-center">
+                <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                    <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                </div>
+                <!-- text -->
+                <div class="text-center p-20">
+                    <div class=" text-center">
+                        <div class="w-[100%] h-[58px]"></div>
+                        <p class="bold text-[40px] mb-10">The History of HTML</p>
+                        <p class="small text-[20px]">
+                            HTML was first created by Tim Berners-Lee, Robert Cailliau, and others starting in 1989. It stands for Hyper Text Markup Language.
+                            Hypertext means that the document contains links that allow the reader to jump to other places in the document or to another document altogether. The latest version is known as HTML5.
+                            A Markup Language is a way that computers speak to each other to control how text is processed and presented. To do this HTML uses two things: tags and attributes.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- 2 -->
-        <div class=" flex justify-center">
-            <div class="w-[80%] grid grid-cols-2 gap-[100px] text-center">
-                <div>
-                    <p class="bold text-[40px] mb-10">What are Tags and Attributes?</p>
-                    <p class="small text-[20px]">Tags and attributes are the basis of HTML.
-                        They work together but perform different functions - it is worth investing 2 minutes in differentiating the two.
-                    </p>
+        <div class=" flex justify-center mb-[300px]">
+            <div class="w-[70%] grid grid-cols-2 gap-[10vw] text-center">
+
+                <div class="flex justify-center">
+                    <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                        <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                            <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                        </div>
+                        <!-- text -->
+                        <div class="p-10">
+                            <div class="w-[100%] h-[58px]"></div>
+                            <p class="bold text-[40px] mb-7">What are Tags and Attributes?</p>
+                            <p class="small text-[20px]">Tags and attributes are the basis of HTML.
+                                They work together but perform different functions - it is worth investing 2 minutes in differentiating the two.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p class="bold text-[40px] mb-10">What Are HTML Tags?</p>
-                    <p class="small text-[20px]">Tags are used to mark up the start of an HTML element and they are usually enclosed in angle brackets. An example of a tag is: &lt;h1&gt;.
-                        Most tags must be opened &lt;h1&gt; and closed &lt;/h1&gt; in order to function.
+
+                <div class="flex justify-center">
+                    <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                        <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                            <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                        </div>
+                        <!-- text -->
+                        <div class="p-10">
+                            <div class="w-[100%] h-[58px]"></div>
+                            <p class="bold text-[40px] mb-6">What Are HTML Tags?</p>
+                    <p class="small text-[20px]">Tags are used to mark up the start of an HTML element and they are usually enclosed in angle brackets. An example of a tag is: <span class="py-1 px-2 bg-blue font-bold rounded-[20px]">&lt;h1&gt;</span>.
+                        Most tags must be opened <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;h1&gt;</span> and closed <span class="py-1 px-2 bg-rose font-bold rounded-[20px]">&lt;/h1&gt;</span> in order to function.
                     </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class=" flex justify-center mb-[300px]">
+            <div class="w-[70%] grid grid-cols-2 gap-[10vw] text-center">
+
+                <div class="flex justify-center">
+                    <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                        <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                            <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                        </div>
+                        <!-- text -->
+                        <div class="p-10">
+                            <div class="w-[100%] h-[58px]"></div>
+                            <p class="bold text-[40px] mb-10">What are HTML Attributes?</p>
+                            <p class="small text-[20px]">Attributes contain additional pieces of information. Attributes take the form of an opening tag and additional info is placed inside.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="relative shade bg-white rounded-[30px] flex justify-center items-center">
+                        <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                            <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                            <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                        </div>
+                        <!-- text -->
+                        <div class="p-10">
+                            <div class="w-[100%] h-[58px]"></div>
+                            <p class="small text-[20px]">An example of an attribute is:</p>
+                            <div class="flex justify-center my-5">
+                                <img class="abosolte" src="/img/carbon.png">
+                            </div>
+                            <p class="small text-[20px]">In this instance, the image source (src) and the alt text (alt) are attributes of the <img> tag.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="flex justify-center mb-[400px]">
+            <div class="w-[40%] relative shade bg-white rounded-[30px] flex justify-center items-center">
+                <div class="absolute flex justify-end bg-yellow w-[100%] h-[58px] rounded-[30px] shade items-center p-6 top-0">
+                    <div class="w-[24px] h-[24px] bg-pink rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-green rounded-full shade ml-4"></div>
+                    <div class="w-[24px] h-[24px] bg-lime rounded-full shade ml-4"></div>
+                </div>
+                <!-- text -->
+                <div class="text-center p-20">
+                    <div class=" text-center">
+                        <div class="w-[100%] h-[58px]"></div>
+                        <p class="bold text-[40px] mb-10">Golden Rules To Remember</p>
+                        <ul ">
+                            <li class="small text-[20px] list-decimal">The vast majority of tags must be opened (<span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;tag&gt;</span>) and closed (<span class="py-1 px-2 bg-pink font-bold rounded-[20px]">&lt;/tag&gt;</span>) with the element information such as a title or text resting between the tags.</li>
+                            <li class="small text-[20px] list-decimal">When using multiple tags, the tags must be closed in the order in which they were opened. For example:</li>
+                        </ul>
+                        <div class="flex justify-center my-10">
+                            <img src="/img/carbon (1).png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+    </div>
+
+    <div id="page2" class="w-full mt-[200px] mb-[300px]">
+
     </div>
 </body>
 </html>
